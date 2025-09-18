@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>スターデューバレー作物計算</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    select, button { margin: 5px; font-size: 16px; }
+    #result { margin-top: 10px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>作物成長計算ツール</h2>
+
+  <!-- 季節 -->
+  <label for="season">季節：</label>
+  <select id="season" onchange="updateCropOptions()">
+    <option value="spring">春</option>
+    <option value="summer">夏</option>
+    <option value="fall">秋</option>
+    <option value="winter">冬</option>
+  </select>
+
+  <!-- 作物 -->
+  <label for="crop">作物：</label>
+  <select id="crop"></select>
+
+  <!-- 肥料 -->
+  <label for="fertilizer">肥料：</label>
+  <select id="fertilizer"></select>
+
+  <!-- 植えた日 -->
+  <label for="day">植えた日：</label>
+  <select id="day"></select>
+
+  <button onclick="calculate()">計算する</button>
+
+  <div id="result"></div>
+
+<h3>カレンダー表示</h3>
+<div id="calendar" style="display:flex; flex-wrap:wrap; width:560px;"></div>
+
+
+  <!-- データ読み込み -->
+  <script src="crops.js"></script>
+  <script src="fertilizers.js"></script>
+  <!-- メイン処理 -->
+  <script src="main.js"></script>
+</body>
+</html>
