@@ -27,8 +27,8 @@ const crops = {
     ],
     fall: [
         {name: "カボチャ", days: 13,regrow: null },
-        {name: "ブドウ", days: 10,regrow: null },
-        {name: "クランベリー", days: 7,regrow: null },
+        {name: "ブドウ", days: 10,regrow: 6 },
+        {name: "クランベリー", days: 7,regrow: 5 },
         {name: "アマランサス", days: 7,regrow: null },
         {name: "アーティチョーク", days: 8,regrow: null },
         {name: "ビーツ", days: 6,regrow: null },
@@ -40,4 +40,5 @@ const crops = {
     winter: [
         //基本作物なし
     ],
+
 };
